@@ -177,7 +177,7 @@ function startTimer(time){
     }
 }
 function startTimerLine(time){
-    counterLine = setInterval(timer, 75);
+    counterLine = setInterval(timer, 100);
     function timer(){
         time += 1;
         timeLineEl.style.width = time + "px";
