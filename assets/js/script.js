@@ -18,7 +18,9 @@ const optionListEl = document.querySelector(".option-list");
 // if start quiz button is clicked
 startBtnEl.onclick = () => {
     infoBoxEl.classList.add("activeInfo");
-    
+    startTimer(50);
+    startTimerLine(widthValue);
+
 
 }
 
@@ -27,15 +29,12 @@ exitBtnEl.onclick = () => {
     infoBoxEl.classList.remove("activeInfo"); // hide the info box
 }
 
-// if continue quiz button is clicked
+// if next question button is clicked
 continueBtnEl.onclick = () => {
     infoBoxEl.classList.remove("activeInfo"); // hide the info box
     quizBoxEl.classList.add("activeQuiz"); // show the quiz box
     showQuestions(0);
     queCounter(1);
-    startTimer(75);
-    startTimerLine(widthValue);
-    
     
 }
 
@@ -43,7 +42,7 @@ continueBtnEl.onclick = () => {
 let queCount = 0;
 let queNumb = 1;
 let counter;
-let timeValue = 75;
+let timeValue = 50;
 let widthValue = 0;
 let userScore = 0;
 let timeTag = 0;
@@ -117,6 +116,8 @@ function optionSelected(answer) {
         answer.classList.add("incorrect");
         console.log("You're wrong");
 
+        timeCountEl.textContent = timeCountEl.textContent -10;
+
         // if answer is incorrect then automatically select the correct answer
         for (i = 0; i < allOptions; i++) {
             if(optionListEl.children[i].textContent == correctAnswer) {
@@ -176,7 +177,7 @@ function startTimer(time){
     }
 }
 function startTimerLine(time){
-    counterLine = setInterval(timer, 125);
+    counterLine = setInterval(timer, 75);
     function timer(){
         time += 1;
         timeLineEl.style.width = time + "px";
