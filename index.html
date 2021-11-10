@@ -14,28 +14,96 @@
 </head>
 <body>
 
-    <header></header>
-
-    <main>
-        <!--Quiz start button-->
+    <header>
+        <!-- start quiz button-->
         <div class="start-btn">
             <button>Start Quiz</button>
         </div>
+    </header>
 
-        <!-- Pre Quiz Info box-->
-        <div class="info"></div>
-        <div class="info"></div>
-        <div class="info"></div>
-        <div class="info"></div>
-        <div class="info"></div>
-        <div class="info"></div>
+    <main>
+        <!--Info Box Start-->
+        <div class="info-box">
+            <div class="info-title">
+                <span>Welcome to the timed quiz! Here are some rules</span>
+            </div>
+            <div class="info-list">
+                <!-- Pre Quiz Info box-->
+                <div class="info">1. A <span>75 second</span> timer will run throughout the quiz.</div>
+                <div class="info">2. If you get a question right, the next question will appear</div>
+                <div class="info">3. If you get a question wrong, time will be ducted from the remaining time and the next question will appear.</div>
+                <div class="info">4. Score is calculated based off of the time remaining at the end.</div>
+                <div class="info">5. Your final score will be added to a list of high scores!</div>
+            </div>
+            <div class="buttons">
+                <button class="quit">Exit quiz</button>
+                <button class="restart">Start quiz</button>
+            </div>
+        </div>
+
+        <!--quiz box-->
+        <div class="quiz-box">
+            <header>
+                <div class="title">The Timed Quiz Challenge</div>
+                <div class="timer">
+                    <div class="time-text">Time Left:</div>
+                    <div class="timer-sec">50</div>
+                </div>
+                <div class="time-line">
+                </div>
+
+            </header>
+            <section>
+                <div class="que-text">
+                   <!--<span>What does HTML stand for?</span>--> 
+                </div>
+                <div class="option-list">
+                    <div class="option">
+                    </div>
+                </div>
+            </section> 
+        
+            <!--Quiz box footer-->
+            <footer>
+            <div class="total-que">
+                <!--<span><p>2</p><p>Of</p><p>5</p><p>Questions</p></span>-->
+            </div>
+            <button class="next-btn">Next Question</button>
+            </footer>
+        </div>
+        
+
+        <!-- Result Box-->
+        <div class="result-box">
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="complete-text">
+                You've completed the Quiz!
+            </div>
+            <div class="score-text">
+                <!--<span>... You only got<p>2</p><p>Out Of</p><p>5</p></span>-->
+            </div>
+            <div class="time-text">
+
+            </div>
+            <div class="buttons">
+                <button class="restart">Replay Quiz?</button>
+                <button class="score">Check the High Scores!</button>
+            </div>
+        </div>
+
+        <!--Score Box-->
+        <div class="score-box">
+            
+        </div>
     </main>
 
-    <footer></footer>
-
-
-
-
     
+
+
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
